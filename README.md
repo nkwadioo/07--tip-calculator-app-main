@@ -1,3 +1,5 @@
+Visit site @  https://nkwadioo.github.io/07--tip-calculator-app-main/
+
 # Frontend Mentor - Tip calculator app
 
 ![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
