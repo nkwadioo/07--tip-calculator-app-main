@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500;700&display=swap");
+body {
+  font-family: 'Space Mono', monospace;
+  background-color: #c5e4e7;
+  font-size: 12px;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  text-transform: uppercase;
+  max-width: 9ch;
+  word-break: break-word;
+  margin: 0 auto;
+  letter-spacing: 8px;
+  padding: 1.5rem;
+  font-weight: 700;
+  color: #5e7a7d;
+}
+
+main {
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  color: #5e7a7d;
+}
+
+.input {
+  background-color: #f4fafa;
+  padding: .5rem .8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+}
+
+.input span {
+  color: #7f9c9f;
+}
+
+.input input {
+  font-size: 24px;
+  font-weight: 700;
+  float: right;
+  width: 90%;
+  border: none;
+  background-color: transparent;
+  text-align: right;
+  color: #00494d;
+}
+
+.input input:focus {
+  outline: none;
+}
+
+.tips {
+  margin: 2rem 0;
+}
+
+.tips span {
+  color: #5e7a7d;
+}
+
+.tips .buttons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: .6rem;
+  margin-top: .5rem;
+}
+
+.tips .buttons button {
+  padding: .5rem 1rem;
+  border: none;
+  color: white;
+  background-color: #00494d;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tips .buttons button:last-child {
+  background-color: #f4fafa;
+  color: #7f9c9f;
+  text-align: right;
+}
+
+.tips .buttons button.active, .tips .buttons button:hover {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+.wrapUp {
+  padding: 1.5rem 1rem;
+  background-color: #00494d;
+  margin-top: 1rem;
+  border-radius: 5px;
+  color: white;
+}
+
+.wrapUp .totals {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapUp .totals span {
+  font-size: 10px;
+  color: #5e7a7d;
+}
+
+.wrapUp .totals .amount {
+  font-weight: 700;
+  font-size: 20px;
+  color: #26c0ab;
+}
+
+.wrapUp button {
+  background-color: #26c0ab;
+  color: #00494d;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  width: 100%;
+  padding: .6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=style.css.map */

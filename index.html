@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
   
   <title>Frontend Mentor | Tip calculator app</title>
 
@@ -15,26 +16,56 @@
   </style>
 </head>
 <body>
+  <header class="header">Splitter</header>
 
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
+  <main>
+    <div class="calculator">
+      <label for="bill">Bill</label>
+      <div class="form-group input">
+        <span>R</span>
+        <input id="bill" name="bill"class="bill" type="tell" >
+      </div>
+    </div>
+    <div class="tips">
+      <span>Select Tip %</span>
+      <div class="buttons">
+        <button>5%</button>
+        <button>10%</button>
+        <button class="active">15%</button>
+        <button>25%</button>
+        <button>50%</button>
+        <button>Custom</button>
+      </div>
+    </div>
+    <div class="persons">
+      <label for="numOfPeople">Number of People</label>
+      <div class="form-group people input">
+        <span><img src="./images/icon-person.svg" alt="person icon"></span>
+        <input type="tell" id="numOfPeople" name="numOfPeople">
+      </div>
+    </div>
+    
+    <div class="wrapUp">
+      <div class="tipsTotals">
+        <div class="totals">
+          <div class="labelInfo">
+            <h5>Tip Amount</h5>
+            <span>/ person</span>
+          </div>
+          <div class="amount perPerson">R0.00</div>
+        </div>
+        <div class="totals">
+          <div class="labelInfo">
+            <h5>Total</h5>
+            <span>/ person</span>
+          </div>
+          <div class="amount overrallTotal">R0.00</div>
+        </div>
+      </div>
+      <button>Reset</button>
+    </div>
+  </main>
+  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
