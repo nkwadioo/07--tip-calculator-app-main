@@ -61,9 +61,15 @@ main {
         background-color: transparent;
         text-align: right;
         color: $Very-dark-cyan;
+        appearance: textfield;
 
         &:focus {
             outline: none;
+        }
+
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            appearance: none;
         }
     }
 }

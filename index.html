@@ -23,25 +23,25 @@
       <label for="bill">Bill</label>
       <div class="form-group input">
         <span>R</span>
-        <input id="bill" name="bill"class="bill" type="tell" >
+        <input id="bill" name="bill"class="bill" type="number" min="0" placeholder="0">
       </div>
     </div>
     <div class="tips">
       <span>Select Tip %</span>
       <div class="buttons">
         <button>5%</button>
-        <button>10%</button>
-        <button class="active">15%</button>
+        <button class="active">10%</button>
+        <button>15%</button>
         <button>25%</button>
         <button>50%</button>
-        <button>Custom</button>
+        <button id="customAmount">Custom</button>
       </div>
     </div>
     <div class="persons">
       <label for="numOfPeople">Number of People</label>
       <div class="form-group people input">
         <span><img src="./images/icon-person.svg" alt="person icon"></span>
-        <input type="tell" id="numOfPeople" name="numOfPeople">
+        <input type="number" id="numOfPeople" name="numOfPeople" min="0" value="1">
       </div>
     </div>
     
@@ -52,14 +52,14 @@
             <h5>Tip Amount</h5>
             <span>/ person</span>
           </div>
-          <div class="amount perPerson">R0.00</div>
+          <div id="perPerson" class="amount">R0.00</div>
         </div>
         <div class="totals">
           <div class="labelInfo">
             <h5>Total</h5>
             <span>/ person</span>
           </div>
-          <div class="amount overrallTotal">R0.00</div>
+          <div id="eachPersonCharge" class="amount">R0.00</div>
         </div>
       </div>
       <button>Reset</button>
@@ -71,5 +71,15 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <div class="resources">
+    <h5>References</h5>
+    <p>(1 <a href="https://stackoverflow.com/questions/26024771/styling-an-input-type-number#26024834">.1 Remove Up and down arrows from input[number]</a></p>
+    <p>(1 <a href="https://codepen.io/komarovdesign/pen/PPRbgb">.2 Remove Up and down arrows from input[number]</a></p>
+    <p>(2 <a href="https://www.freecodecamp.org/news/javascript-addeventlistener-example-code/">.1 Learn how to add an event lister</a></p>
+    <p>(3 <a href="https://medium.com/free-code-camp/how-to-set-up-a-typescript-project-67b427114884#7248">.1 Add and using typescript</a></p>
+    <p>(3 <a href="https://stackoverflow.com/questions/49693981/how-to-use-eventtarget-in-typescript">.2 type casting variable to get typescript working for event.target</a></p>
+  </div>
+  <script defer src="./js/main.js"></script>
 </body>
 </html>

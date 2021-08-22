@@ -58,10 +58,18 @@ main {
   background-color: transparent;
   text-align: right;
   color: #00494d;
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
 }
 
 .input input:focus {
   outline: none;
+}
+
+.input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .tips {
