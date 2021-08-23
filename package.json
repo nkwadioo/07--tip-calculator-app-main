@@ -1,0 +1,28 @@
+{
+  "name": "07--tip-calculator-app-main",
+  "version": "1.0.0",
+  "description": "app to help slit bill amounts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nkwadioo/07--tip-calculator-app-main.git"
+  },
+  "keywords": [
+    "scss",
+    "typescript",
+    "javascrit",
+    "html",
+    "eventLister"
+  ],
+  "author": "Nkwadioo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nkwadioo/07--tip-calculator-app-main/issues"
+  },
+  "homepage": "https://github.com/nkwadioo/07--tip-calculator-app-main#readme"
+}
