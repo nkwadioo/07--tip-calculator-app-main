@@ -62,7 +62,7 @@ main {
         box-shadow: 0px 0px 0px 2px red;
 
         &::before {
-            content: 'Can\'t be zero or less';
+            content: 'Can\'t be zero';
             position: absolute;
             right: 0;
             top: -22px;
@@ -122,6 +122,7 @@ input {
             border-radius: 5px;
             font-weight: 700;
             cursor: pointer;
+            font-size: 23px;
 
             &.active, &:hover {
                 background-color: $Strong-cyan;
@@ -208,6 +209,9 @@ input {
     }
     
     .wrapUp {
-        max-height: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 200px;
     }
 }
