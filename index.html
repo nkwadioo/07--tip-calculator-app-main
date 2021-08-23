@@ -19,31 +19,36 @@
   <header class="header">Splitter</header>
 
   <main>
-    <div class="calculator">
-      <label for="bill">Bill</label>
-      <div class="form-group input">
-        <span>R</span>
-        <input id="bill" name="bill"class="bill" type="number" min="0" placeholder="0">
+    <section>
+      <div class="calculator">
+        <label for="bill">Bill</label>
+        <div class="form-group input">
+          <span>R</span>
+          <input id="bill" name="bill"class="bill" type="number" min="0" placeholder="0">
+        </div>
       </div>
-    </div>
-    <div class="tips">
-      <span>Select Tip %</span>
-      <div class="buttons">
-        <button>5%</button>
-        <button class="active">10%</button>
-        <button>15%</button>
-        <button>25%</button>
-        <button>50%</button>
-        <button id="customAmount">Custom</button>
+      <div class="tips">
+        <span>Select Tip %</span>
+        <div class="buttons">
+          <button>5%</button>
+          <button class="active">10%</button>
+          <button>15%</button>
+          <button>25%</button>
+          <button>50%</button>
+          <button id="customAmount">
+            <input type="number" name="custom" id="custom" placeholder="Custom" min="0">
+          </button>
+        </div>
       </div>
-    </div>
-    <div class="persons">
-      <label for="numOfPeople">Number of People</label>
-      <div class="form-group people input">
-        <span><img src="./images/icon-person.svg" alt="person icon"></span>
-        <input type="number" id="numOfPeople" name="numOfPeople" min="0" value="1">
+      <div class="persons">
+        <label for="numOfPeople">Number of People</label>
+        <div class="form-group people input">
+          <span><img src="./images/icon-person.svg" alt="person icon"></span>
+          <input type="number" id="numOfPeople" name="numOfPeople" min="0" value="1">
+        </div>
       </div>
-    </div>
+
+    </section>
     
     <div class="wrapUp">
       <div class="tipsTotals">
@@ -62,14 +67,14 @@
           <div id="eachPersonCharge" class="amount">R0.00</div>
         </div>
       </div>
-      <button>Reset</button>
+      <button id="reset">Reset</button>
     </div>
   </main>
   
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/nkwadioo/07--tip-calculator-app-main">Nkwadioo</a>.
   </div>
 
   <div class="resources">

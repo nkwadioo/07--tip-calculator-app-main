@@ -48,29 +48,56 @@ main {
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
+    position: relative;
     
     span {
         color: $Dark-grayish-cyan;
     }
-    input {
-        font-size: 24px;
-        font-weight: 700;
-        float: right;
-        width: 90%;
-        border: none;
-        background-color: transparent;
-        text-align: right;
-        color: $Very-dark-cyan;
-        appearance: textfield;
 
-        &:focus {
-            outline: none;
-        }
+    &.visible {
+        box-shadow: 0px 0px 0px 2px $Strong-cyan;
+    }
 
-        &::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            appearance: none;
+    &.error {
+        box-shadow: 0px 0px 0px 2px red;
+
+        &::before {
+            content: 'Can\'t be zero or less';
+            position: absolute;
+            right: 0;
+            top: -22px;
+            color: red;
         }
+    }
+}
+
+#reset {
+    cursor: pointer;
+}
+
+label {
+    margin-bottom: 0.4rem;
+    display: block;
+}
+
+input {
+    font-size: 24px;
+    font-weight: 700;
+    float: right;
+    width: 90%;
+    border: none;
+    background-color: transparent;
+    text-align: right;
+    color: $Very-dark-cyan;
+    appearance: textfield;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        appearance: none;
     }
 }
 
@@ -96,17 +123,37 @@ main {
             font-weight: 700;
             cursor: pointer;
 
-            &:last-child {
-                background-color: $Lighter-grayish-cyan;
-                color: $Dark-grayish-cyan;
-                text-align: right;
-            }
-
             &.active, &:hover {
                 background-color: $Strong-cyan;
                 color: $Very-dark-cyan
             }
+
+            &:last-child {
+                padding: 0 .5rem;
+                background-color: $Lighter-grayish-cyan;
+                color: $Dark-grayish-cyan;
+                text-align: right;
+                cursor: pointer;
+
+                &.active {
+                    border: 2px solid $Strong-cyan;
+                    input {
+                        color: $Very-dark-cyan;
+                    }
+                }
+
+                &.error {
+                    border: 2px solid red;
+                }
+            }
         }
+    }
+    input {
+        border-radius: 5px;
+        background-color: $Lighter-grayish-cyan;
+        color: $Dark-grayish-cyan;
+        text-align: right;
+        width: 100%;
     }
 }
 
@@ -147,5 +194,20 @@ main {
         padding: .6rem;
         font-weight: 700;
         text-transform: uppercase;
+    }
+}
+
+@media (min-width: 550px) { 
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+
+        max-width: 750px;
+        margin: auto;
+    }
+    
+    .wrapUp {
+        max-height: max-content;
     }
 }

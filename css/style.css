@@ -43,13 +43,41 @@ main {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 5px;
+  position: relative;
 }
 
 .input span {
   color: #7f9c9f;
 }
 
-.input input {
+.input.visible {
+  -webkit-box-shadow: 0px 0px 0px 2px #26c0ab;
+          box-shadow: 0px 0px 0px 2px #26c0ab;
+}
+
+.input.error {
+  -webkit-box-shadow: 0px 0px 0px 2px red;
+          box-shadow: 0px 0px 0px 2px red;
+}
+
+.input.error::before {
+  content: 'Can\'t be zero or less';
+  position: absolute;
+  right: 0;
+  top: -22px;
+  color: red;
+}
+
+#reset {
+  cursor: pointer;
+}
+
+label {
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+input {
   font-size: 24px;
   font-weight: 700;
   float: right;
@@ -63,11 +91,11 @@ main {
           appearance: textfield;
 }
 
-.input input:focus {
+input:focus {
   outline: none;
 }
 
-.input input::-webkit-inner-spin-button {
+input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   appearance: none;
 }
@@ -99,15 +127,37 @@ main {
   cursor: pointer;
 }
 
-.tips .buttons button:last-child {
-  background-color: #f4fafa;
-  color: #7f9c9f;
-  text-align: right;
-}
-
 .tips .buttons button.active, .tips .buttons button:hover {
   background-color: #26c0ab;
   color: #00494d;
+}
+
+.tips .buttons button:last-child {
+  padding: 0 .5rem;
+  background-color: #f4fafa;
+  color: #7f9c9f;
+  text-align: right;
+  cursor: pointer;
+}
+
+.tips .buttons button:last-child.active {
+  border: 2px solid #26c0ab;
+}
+
+.tips .buttons button:last-child.active input {
+  color: #00494d;
+}
+
+.tips .buttons button:last-child.error {
+  border: 2px solid red;
+}
+
+.tips input {
+  border-radius: 5px;
+  background-color: #f4fafa;
+  color: #7f9c9f;
+  text-align: right;
+  width: 100%;
 }
 
 .wrapUp {
@@ -152,5 +202,22 @@ main {
   padding: .6rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+@media (min-width: 550px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 750px;
+    margin: auto;
+  }
+  .wrapUp {
+    max-height: -webkit-max-content;
+    max-height: -moz-max-content;
+    max-height: max-content;
+  }
 }
 /*# sourceMappingURL=style.css.map */
